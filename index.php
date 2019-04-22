@@ -1,5 +1,5 @@
 <?php
-sendx("Hello World I'am Bot");
+sendx("สวัสดีตอนเช้า\nข้อมูลการพยากรณ์สำหรับวันพรุ่งนี้\nORP:-752\nPH:6.22\nTemperature:41.42\nระบบมีความผิดปกติเล็กน้อย\nข้อมูลเฉลี่ยรายวันในวันที่ผ่านมา\nORP:-652\nPH:69.52\nTemperature:39.92\nขอบคุณครับ");
 
 function sendx($msg){
 		$strAccessToken = "oKfXSEXkmDRNdxcUrkAJrvoJ49gdmeCM+MoMbpLXOKXicGis8P7YsIWT0f5BBYP9h3xjTVxRkUdyQGKr3rg6X5nRmSnIMEe7w9+oZ4fKO8d6rEZeiGruIfNwV5eFmsMoPHbb9fdbw92/nWN/jsPpPgdB04t89/1O/w1cDnyilFU=";
