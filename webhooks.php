@@ -16,13 +16,13 @@
     if($message == "สวัสดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = $arrayJson['events'][0]['source']['userId'];
+        $arrayPostData['messages'][0]['text'] = "สวัสดีครับ ^^";
         replyMsg($arrayHeader,$arrayPostData);
     }
 	else if($message == "สมัครสมาชิก"){
 		
 		    $id = $arrayJson['events'][0]['source']['userId'];
-			$url = "https://apecpv.cmru.ac.th/adduser.php?id=".$id;
+			$url = "https://apecpv.cmru.ac.th/projecterdi/adduser.php?id=".$id;
 			$json = file_get_contents($url);
 			$obj = json_decode($json);
 			foreach($obj as $key=>$value)
