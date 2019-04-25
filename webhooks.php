@@ -22,7 +22,7 @@
 	else if($message == "subscript"){
 		
 		    $id = $arrayJson['events'][0]['source']['userId'];
-			$url = "https://apecpv.cmru.ac.th/projecterdi/adduser.php?id=$id";
+			$url = "https://apecpv.cmru.ac.th/projecterdi/adduser.php?id=".$id;
 			$json = file_get_contents($url);
 			$obj = json_decode($json);
 		
@@ -33,7 +33,7 @@
 		    
 			$arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 			$arrayPostData['messages'][0]['type'] = "text";
-			$arrayPostData['messages'][0]['text'] = $obj;
+			$arrayPostData['messages'][0]['text'] = $resule;
 		
 			if($resule == "no"){
 				$arrayPostData['messages'][0]['text'] = "ฉันจำได้ว่าคุณสมัครสมาชิกไปแล้วนะ";
