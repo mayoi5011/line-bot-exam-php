@@ -25,7 +25,7 @@
 			$url = "https://apecpv.cmru.ac.th/projecterdi/adduser.php?id=$id";
 			$json = file_get_contents($url);
 			$obj = json_decode($json);
-			$resule = '';
+		
 			foreach($obj as $key=>$value)
 			{
 				$resule = $value;
@@ -33,6 +33,8 @@
 		    
 			$arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 			$arrayPostData['messages'][0]['type'] = "text";
+			$arrayPostData['messages'][0]['text'] = $obj;
+		
 			if($resule == "no"){
 				$arrayPostData['messages'][0]['text'] = "ฉันจำได้ว่าคุณสมัครสมาชิกไปแล้วนะ";
 			}else if($resule == "ok"){
