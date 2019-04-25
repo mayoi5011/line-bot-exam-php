@@ -16,7 +16,7 @@
     if($message == "สวัสดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้า ^_^";
+        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้า ^_^".$id;
         replyMsg($arrayHeader,$arrayPostData);
     }
 	else if($message == "สมัครสมาชิก"){
