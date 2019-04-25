@@ -25,6 +25,7 @@
 			$url = "https://apecpv.cmru.ac.th/projecterdi/adduser.php?id=$id";
 			$json = file_get_contents($url);
 			$obj = json_decode($json);
+			$resule = '';
 			foreach($obj as $key=>$value)
 			{
 				$resule = $value;
