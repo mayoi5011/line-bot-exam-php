@@ -19,7 +19,7 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีครับ ^^";
         replyMsg($arrayHeader,$arrayPostData);
     }
-	else if($message == "สมัครสมาชิก"){
+	else if($message == "subscript"){
 		
 		    $id = $arrayJson['events'][0]['source']['userId'];
 			$url = "https://apecpv.cmru.ac.th/projecterdi/adduser.php?id=$id";
